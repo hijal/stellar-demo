@@ -1,16 +1,16 @@
 require('dotenv').config();
 
 const express = require('express');
-const { Keypair, Transaction } = require('stellar-sdk');
-
-const SERVER_PORT = process.env.SERVER_PORT;
-const SERVER_SIGNING_KEY = process.env.SERVER_SIGNING_KEY;
+const { Keypair, Transaction, Networks } = require('stellar-sdk');
 
 function enableCors(req, res, next) {
   res.set('Access-Control-Allow-Origin', '*');
-  res.set('Access-Control-Allow-Methods', 'GET');
+  res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
   next();
 }
+
+const { PORT } = require('./config');
 
 const app = express();
 
@@ -33,8 +33,9 @@ app.use(
   })
 );
 
-app.listen(SERVER_PORT, () => {
-  console.log(`Listening on port http://localhost:${SERVER_PORT}`);
-});
+app.get('/auth', require('./hadlers/challange'));
+app.post('/auth', require('./hadlers/token'));
+
+app.listen(PORT);
 
 // app.listen();
