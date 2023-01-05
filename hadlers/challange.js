@@ -37,7 +37,7 @@ const challenge = async (req, res) => {
   };
   const tx = new Stellar.TransactionBuilder(account, tx_options).addOperation(opts).build();
   tx.sign(SERVER_KEY_PAIR);
-  res.json({ transaction: tx.toEnvelope().toXDR('base64'), network_passphrase: NETWORK_PASSPHRASE });
+  res.json({ transaction: tx.toEnvelope().toXDR().toString('base64'), network_passphrase: NETWORK_PASSPHRASE });
 };
 
 module.exports = challenge;
