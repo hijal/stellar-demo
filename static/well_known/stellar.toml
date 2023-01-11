@@ -1,18 +1,89 @@
-ACCOUNTS = [ "GBL4AHB42DHXSEDTVWKGPOQH4RUUMQB7R5D2HLBR7DLR7ZVJV74OXQOR" ]
-VERSION = "0.1.0"
-SIGNING_KEY = "GBL4AHB42DHXSEDTVWKGPOQH4RUUMQB7R5D2HLBR7DLR7ZVJV74OXQOR"
-NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
-WEB_AUTH_ENDPOINT = ""
 
-[[PRINCIPALS]]
-name = "Hijikesh Hijal"
-email = "hijal.browser@gmail.com"
-keybase = "hijal"
-github = "https://www.github.com/hijal"
+FEDERATION_SERVER="https://api.apay.io/api/federation"
+DEPOSIT_SERVER="https://api.apay.io/api"
+TRANSFER_SERVER="https://api.apay.io/api"
+WEB_AUTH_ACCOUNT="GC6KIDBQD5SAVE7D4WGFNJACVU2CRPMPYF56O5JYSR7YIKI647KDH5W3"
+WEB_AUTH_ENDPOINT="http://localhost:3000/auth"
 
 [DOCUMENTATION]
-ORG_NAME = "Petseba"
-ORG_URL = "https://petseba.com"
-ORG_DESCRIPTION = "demo backend server"
-ORG_PHONE_NUMBER = "+880178765431"
-ORG_LOGO = "https://api-ninjas.com/images/cats/abyssinian.jpg"
+ORG_NAME="COMING SOON"
+ORG_DESCRIPTION="COMING SOON"
+ORG_PHYSICAL_ADDRESS="COMING SOON"
+ORG_PHYSICAL_ADDRESS_ATTESTATION="COMING SOON"
+ORG_PHONE_NUMBER="COMING SOON"
+ORG_PHONE_NUMBER_ATTESTATION="COMING SOON"
+ORG_DBA="Apay"
+ORG_URL="https://apay.io"
+ORG_LOGO="https://apay.io/public/logo.png"
+ORG_GITHUB="apay-io"
+ORG_KEYBASE="apay.public"
+ORG_OFFICIAL_EMAIL="support@apay.io"
+ORG_SUPPORT_EMAIL="support@apay.io"
+
+[[PRINCIPALS]]
+name="Sergey Yusupov"
+email="s@apay.io"
+telegram="umbre1"
+twitter="uniqbiun"
+keybase="umbrel"
+github="s-a-y"
+id_photo_hash=""
+verification_photo_hash=""
+
+[[CURRENCIES]]
+code="BTC"
+issuer="GCZUTICRTUPNNVXKGXZBEEZXMPYFCO3MQIT3K4OPIUBRHKNHC5FPAKXB"
+display_decimals=7
+name="Bitcoin"
+desc="1 BTC token entitles you to receive 1 Bitcoin (minus outgoing transaction fee) to an address of your choice using our anchor."
+conditions="Outgoing transaction fee deducted from the amount sent"
+image="https://apay.io/public/logo/btc.svg"
+status="live"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="BTC"
+
+
+[[CURRENCIES]]
+code="LTC"
+issuer="GAEMB7CJBVKPOXNFTADENUVW2FXXNAT2SPZ55YZDR2AUT7O2OEMXPTDN"
+display_decimals=7
+name="Litecoin"
+desc="1 LTC token entitles you to receive 1 Litecoin (minus outgoing transaction fee) to an address of your choice using our anchor."
+conditions="Outgoing transaction fee deducted from the amount sent"
+image="https://apay.io/public/logo/ltc.png"
+status="live"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="LTC"
+
+
+
+[[CURRENCIES]]
+code="ETH"
+issuer="GBIAFNT4SGI7VSUCWPCWDZ6P2K577SKMOXFOEACLWBF44XPM2TAINPXC"
+display_decimals=7
+name="Ethereum"
+desc="1 ETH token entitles you to receive 1 ETH (minus outgoing transaction fee) to an address of your choice using our anchor."
+conditions="Outgoing transaction fee deducted from the amount sent."
+image="https://apay.io/public/logo/eth.png"
+status="live"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="ETH"
+
+
+
+
+[[CURRENCIES]]
+code="USDT"
+issuer="GDMZQDKFV4ICG4EQESO2OQ7CDTENJ3R5AM5PLHDGJLF54TH5KKORRPCB"
+display_decimals=7
+name="Tether USD (ERC20)"
+desc="1 USDT token entitles you to receive 1 USDT token on Ethereum (minus outgoing transaction fee) to an address of your choice using our anchor."
+conditions="Outgoing transaction fee deducted from the amount sent. USDT contract 0xdAC17F958D2ee523a2206206994597C13D831ec7"
+image="https://apay.io/public/logo/usdt.svg"
+status="live"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="USD"

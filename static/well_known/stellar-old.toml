@@ -1,0 +1,18 @@
+ACCOUNTS = [ "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5", "GD2GJLLQ2T5BVM5NPJ7XQO45AQFZVLDIFRTV743AP6GSC6M2L63WHMBF" ]
+VERSION = "0.1.0"
+WEB_AUTH_ACCOUNT = "GC6KIDBQD5SAVE7D4WGFNJACVU2CRPMPYF56O5JYSR7YIKI647KDH5W3"
+NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
+WEB_AUTH_ENDPOINT = "http://localhost:3000/auth"
+
+[[PRINCIPALS]]
+name = "Hijikesh Hijal"
+email = "hijal.browser@gmail.com"
+keybase = "hijal"
+github = "https://www.github.com/hijal"
+
+[[DOCUMENTATION]]
+ORG_NAME = "Petseba"
+ORG_URL = "https://petseba.com"
+ORG_DESCRIPTION = "demo backend server"
+ORG_PHONE_NUMBER = "+880178765431"
+ORG_LOGO = "https://api-ninjas.com/images/cats/abyssinian.jpg"

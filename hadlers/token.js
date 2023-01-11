@@ -1,6 +1,12 @@
 const { Transaction, Keypair } = require('stellar-sdk');
 
-const { SERVER_KEY_PAIR, ENDPOINT, JWT_SECRET, JWT_TOKEN_EXP, ALLOWED_ACCOUNTS } = require('../config');
+const {
+  SERVER_KEY_PAIR,
+  ENDPOINT,
+  JWT_SECRET,
+  JWT_TOKEN_EXP,
+  ALLOWED_ACCOUNTS
+} = require('../config');
 
 const jwt = require('jsonwebtoken');
 
@@ -82,11 +88,11 @@ module.exports = (req, res) => {
     });
   }
 
-  //   if (ALLOWED_ACCOUNTS.indexOf(op.source) === -1) {
-  //     return res.json({
-  //       error: `${op.source} access denied`
-  //     });
-  //   }
+  if (ALLOWED_ACCOUNTS.indexOf(op.source) === -1) {
+    return res.json({
+      error: `${op.source} access denied`
+    });
+  }
 
   const token = jwt.sign(
     {
